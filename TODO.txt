@@ -1,0 +1,7 @@
+- Hacer README.md
+- Hacer que el objeto al terminar la compra en el carrito lo guarde en el localstorage
+- Revisar regex de registro de correos.
+- Verificar usuarios de la api
+- Añadir CRUD
+- Añadir listado de productos + CRUD
+- Añadir clientes + CRUD

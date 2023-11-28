@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./Assets/CSS/main.css">
+    <link rel="stylesheet" href="../Assets/CSS/style.css">
+    <link rel="stylesheet" href="./Assets/CSS/filter.css">
+    <link rel="stylesheet" href="./Assets/CSS/modal-product.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+        integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <title>FakeShop | Products</title>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper" id="wrapper"> <!-- Envoltura -->
+            <!-- Cabecera -->
+            <nav class="navbar"> <!-- Navegador -->
+                <div class="brand"> <!-- Marca -->
+                    <a href="../index.html">
+                        <h2><span id="fake">FAKE</span><span id="raya">-</span><span id="store">STORE</span></h2>
+                    </a> <!-- Nombre -->
+                </div>
+                <ul class="menu"> <!-- Menú -->
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a class="active" href="./index.html">Products</a></li>
+                    <li><a href="../Clients/index.html">Clients</a></li>
+                    <li><a href="../Login/index.html">Login</a></li>
+                </ul>
+            </nav>
+    </header>
+    <div class="products">
+        <div class="container">
+            <h1 class="lg-title">Our Products</h1>
+            <div class="wrapper2">
+                <nav>
+                    <div class="items" id="items">
+                        <span class="item active" data-name="all">All</span>
+                    </div>
+                </nav>
+            </div>
+            <div class="product-items" id="product-item">
+            </div>
+        </div>
+    </div>
+    <footer class="footer"> <!-- Pie de página -->
+        <div class="footer-content">
+            <h2>Jouse Márquez</h2>
+            <h5>Frontend Developer</h5>
+        </div>
+        <div class="social-network"> <!-- Redes sociales -->
+            <a href="https://github.com/jousemarquez" target="_blank"><i class="fa-brands fa-github-square"></i></a>
+            <a href="https://www.instagram.com/jousemarquez/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal-container" id="modal_container" style="display:none">
+    </div>
+
+    <div class="cart-main">
+        <div class="cart" id="my-cart">
+            <table class="table">
+                <caption>Cart</caption>
+                <tbody>
+                    <tr>
+                        <th>Quantity:</th>
+                        <td><span id="total-Products">0</span></td>
+                    </tr>
+                    <tr>
+                        <th>Total:</th>
+                        <td id="total-price">$ <span id="total">0</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="">
+                <button onclick="purchaseCart()">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading" style="display:none">
+        <div class="icono"></div>
+    </div>
+    <script src="./Assets/JS/Script.js"></script>
+</body>
+
+</html>

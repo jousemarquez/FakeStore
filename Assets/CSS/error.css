@@ -1,0 +1,7 @@
+#error-container {
+    display: none;
+    color: red;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}

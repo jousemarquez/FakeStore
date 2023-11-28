@@ -1,0 +1,15 @@
+/* Refactor root vars */
+:root {
+    --white-light: #ffffff;
+    --black: #000;
+    --alice-blue: #f6f6f6;
+    --gray: #a7a7a780;
+    --duck-egg: #086d6d;
+    --purple: #65005e;
+    --sapphire: #3c84ce;
+    --cyan: #30eee2;
+    --soft-green: #91d4a00;
+    --dark-green: #14462033;
+    --red: #ff1919;
+    --home-gradient: var(--purple) 3%, var(--sapphire) 38%, var(--cyan) 68%, var(--red) 98%;
+  }

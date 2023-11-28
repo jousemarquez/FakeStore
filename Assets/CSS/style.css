@@ -1,0 +1,231 @@
+@import url(root.css);
+@import url(buttons.css);
+@import url(background.css);
+@import url(error.css);
+
+* {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  margin: auto;
+  background: linear-gradient(315deg, var(--home-gradient));
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+.wrapper {
+  width: 100vw;
+  background-color: var(--black);
+  color: var(--white-light);
+}
+
+.navbar {
+  background-color: var(--black);
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  padding-bottom: 1em;
+  position: sticky;
+  top: 0;
+}
+
+.brand {
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-top: -15px;
+  font-size: 2.1em;
+  box-sizing: border-box;
+}
+
+.brand a {
+  color: var(--white-light);
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: var(--white-light);
+  background-image: linear-gradient(0deg, var(--duck-egg) 6%, var(--black) 15%);
+}
+
+.brand h2 #fake:hover {
+  color: var(--duck-egg);
+}
+
+.menu {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  color: var(--white-light);
+  text-decoration: none;
+  font-size: 1.7em;
+  padding: 10px 20px;
+  transition: ease-in-out .4s;
+  -webkit-transition: ease-in-out .4s;
+  -moz-transition: ease-in-out .4s;
+  -ms-transition: ease-in-out .4s;
+  -o-transition: ease-in-out .4s;
+}
+
+.menu .active {
+  color: var(--duck-egg);
+}
+
+.menu a:hover {
+  color: var(--white-light);
+  background-image: linear-gradient(0deg, var(--duck-egg) 6%, var(--black) 15%);
+}
+
+.main {
+  margin: 0 auto;
+  width: 85vw;
+  height: 50vh auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  font-weight: bold;
+  margin-top: 5em;
+}
+
+/* CSS */
+
+/* Button */
+
+
+#store {
+  color: var(--duck-egg);
+}
+
+.about {
+  background-color: var(--white-light);
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100vw;
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  grid-column: 1/5;
+}
+
+.about-info {
+  grid-column: 5/10;
+  padding: 6em;
+}
+
+.about-info h2 {
+  font-size: 3.5em;
+  color: var(--black);
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0.5em;
+}
+
+.about-info h2:after {
+  content: '';
+  position: absolute;
+  width: 20%;
+  height: 4px;
+  background-color: var(--duck-egg);
+  bottom: -8px;
+  left: 0;
+  transition: .6s ease-out;
+  -webkit-transition: .6s ease-out;
+  -moz-transition: .6s ease-out;
+  -ms-transition: .6s ease-out;
+  -o-transition: .6s ease-out;
+}
+
+.about-info h2:hover:after {
+  width: 110%;
+  transition: .3s ease-in-out;
+  transform-origin: bottom left;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+}
+
+.about p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  color: var(--black);
+}
+
+.footer {
+  background-color: var(--black);
+  color: var(--white-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 200px;
+}
+
+.footer-content h2 {
+  font-size: 3em;
+  color: var(--white-light);
+}
+
+.footer-content h2:hover {
+  color: var(--duck-egg);
+}
+
+.footer-content h4,
+.social-network i {
+  font-size: 1.5em;
+}
+
+.social-network {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 300px;
+  margin-top: 1.5em;
+}
+
+.social-network a {
+  color: var(--white-light);
+  text-decoration: none;
+}
+
+.social-network a:hover {
+  color: var(--duck-egg);
+}
+
+#gif {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+}
