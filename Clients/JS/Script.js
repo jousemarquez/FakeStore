@@ -210,3 +210,13 @@ const Details = (data) => {
         document.getElementById("modal_container").style.display = "none";
     });
 };
+
+// Menú Hamburger
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const menu = document.querySelector(".menu");
+
+    hamburgerMenu.addEventListener("click", function () {
+        menu.classList.toggle("show");
+    });
+});

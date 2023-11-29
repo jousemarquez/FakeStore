@@ -5,11 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/jpg" href="./Assets/img/logo.jpg">
+  <link rel="icon" type="image/jpg" href="../Assets/img/logo.jpg">
   <link rel="stylesheet" href="../Assets/CSS/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
-    integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
-  <!-- font awesome -->
   <!-- LitElements-->
   <script src="https://unpkg.com/@webcomponents/webcomponentsjs@latest/webcomponents-loader.js"></script>
   <title>FakeShop</title>
@@ -26,10 +23,10 @@
           </a>
         </div>
         <ul class="menu">
-          <li><a class="active" href="./index.html">Home</a></li>
-          <li><a href="./Products/index.html">Products</a></li>
-          <li><a href="./Clients/index.html">Clients</a></li>
-          <li><a href="./User/user.html"><i class="fa-solid fa-user fa-2xs"></a></i><div id="loggedInUserDisplay"></div></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../Products/index.html">Products</a></li>
+          <li><a href="../Clients/index.html">Clients</a></li>
+          <li><div id="loggedInUserDisplay" class="active"></div></li>
           <li><button type="button" id="login-logout-button">Login</button></li>
         </ul>
         <div class="hamburger-menu">
@@ -43,15 +40,20 @@
   
 
   <main>
-    <div class="about" id="about"> <!-- About -->
-      <img class="images" src="./Assets/img/logo.jpg" alt="Brand" draggable="false" id="image-about">
-      <div class="about-info"> <!-- Información -->
-        <h2>Just purchase for NOTHING</h2> <!-- Título -->
-        <p>Being scammed in just two clicks.</p>
+    <section class="user-profile">
+      <h1>User Profile</h1>
+      <div class="user-info">
+        <h2>User Information</h2>
       </div>
-      
-    </div>
+  
+      <div class="past-carts">
+        <h2>Past Shopping Carts</h2>
+        <ul class="cart-list" id="cart-list">
+        </ul>
+      </div>
+    </section>
   </main>
+  
   <!-------------------------------------------------------------------------->
   <footer class="footer"> <!-- Pie de página -->
     <div class="footer-content">
@@ -75,7 +77,7 @@
   <div id="loading" style="display:none"></div>
 
   <script src="./Assets/JS/Script.js" defer></script>
-  <script src="./Assets/JS/404.js" defer></script>
+  <script src="../Assets/JS/404.js" defer></script>
 
 </body>
 

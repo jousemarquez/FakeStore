@@ -1,3 +1,5 @@
+- CAMBIAR TODOS LOS HEADERS
+
 - Hacer README.md
 - Hacer que el objeto al terminar la compra en el carrito lo guarde en el localstorage
 - Revisar regex de registro de correos.

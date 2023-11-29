@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpg" href="../Assets/img/logo.jpg">
   <link rel="stylesheet" href="../Assets/CSS/style.css">
   <link rel="stylesheet" href="./CSS/style.css">
   <link rel="stylesheet" href="./CSS/modal.css">
@@ -13,21 +14,29 @@
 
 <body>
   <header>
-    <div class="wrapper" id="wrapper"> <!-- Envoltura -->
-      <!-- Cabecera -->
-      <nav class="navbar"> <!-- Navegador -->
-        <div class="brand"> <!-- Marca -->
+    <div class="wrapper" id="wrapper">
+      <nav class="navbar">
+        <div class="brand">
           <a href="../index.html">
             <h2><span id="fake">FAKE</span><span id="raya">-</span><span id="store">SHOP</span></h2>
-          </a> <!-- Nombre -->
+          </a>
         </div>
-        <ul class="menu"> <!-- Menú -->
+        <ul class="menu">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../Products/index.html">Products</a></li>
           <li><a class="active" href="./index.html">Clients</a></li>
-          <li><a href="../Login/index.html">Login</a></li>
+          <li>
+            <div id="loggedInUserDisplay"></div>
+          </li>
+          <li><button type="button" id="login-logout-button">Login</button></li>
         </ul>
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
       </nav>
+    </div>
   </header>
 
   <div class="text-center">
@@ -74,7 +83,9 @@
     <div class="wave"></div>
   </div>
 
-  <script src="./JS/Script.js"></script>
+  <script src="./JS/Script.js" defer></script>
+  <script src="../Assets/JS/Script.js" defer></script>
 
 </body>
+
 </html>

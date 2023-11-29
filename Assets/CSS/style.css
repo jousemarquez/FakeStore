@@ -20,7 +20,8 @@ html {
 }
 
 body {
-  margin: auto;
+  margin: 0;
+  min-height: 100vh;
   background: linear-gradient(315deg, var(--home-gradient));
   animation: gradient 15s ease infinite;
   background-size: 400% 400%;
@@ -37,13 +38,13 @@ body {
 
 .navbar {
   background-color: var(--black);
-  z-index: 2;
   display: flex;
   justify-content: space-between;
   padding: 2em;
   padding-bottom: 1em;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 .brand {
@@ -102,7 +103,7 @@ body {
 .main {
   margin: 0 auto;
   width: 85vw;
-  height: 50vh auto;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -120,7 +121,7 @@ body {
 }
 
 .about {
-  background-color: var(--white-light);
+  background-color: #FEDF9F;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   width: 100vw;
@@ -129,7 +130,7 @@ body {
 
 .about img {
   width: 100%;
-  grid-column: 1/5;
+  grid-column: 2/5;
 }
 
 .about-info {
@@ -161,7 +162,7 @@ body {
 }
 
 .about-info h2:hover:after {
-  width: 110%;
+  width: 77%;
   transition: .3s ease-in-out;
   transform-origin: bottom left;
   -webkit-transition: .3s ease-in-out;
@@ -186,6 +187,8 @@ body {
   text-align: center;
   width: 100vw;
   height: 200px;
+  margin-top: auto;
+  z-index: 100;
 }
 
 .footer-content h2 {
@@ -228,4 +231,58 @@ body {
   width: auto;
   height: auto;
   z-index: -1000;
+}
+
+#loggedInUserDisplay {
+  padding-top: 8px;
+}
+
+/* Responsive Navbar */
+
+/* Agrega estas reglas al final de tu archivo CSS actual */
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--white-light);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: var(--black);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu.show {
+      display: flex;
+  }
+
+  .menu li {
+      text-align: center;
+      margin: 10px 0;
+  }
+
+  .hamburger-menu {
+      display: flex;
+  }
+
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
 }

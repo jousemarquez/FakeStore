@@ -1,4 +1,4 @@
-@import url(../../../Assets/CSS/root.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');  /* Font: Roboto */
 
 * {
     margin: 0;
@@ -6,11 +6,6 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-h1,
-p {
-    color: white;
 }
 
 main {
@@ -22,7 +17,7 @@ main {
 .container__todo {
     width: 100%;
     max-width: 800px;
-    margin: auto;
+    margin: auto;  
 }
 
 .box__back {
@@ -37,8 +32,8 @@ main {
 
 .box__back div {
     margin: 100px 40px;
-    color: var(--light-white);
-    transition: all 500ms;
+    color: white;
+    transition: all 500ms; 
     -webkit-transition: all 500ms;
     -moz-transition: all 500ms;
     -ms-transition: all 500ms;
@@ -51,18 +46,18 @@ main {
 }
 
 .box__back div h3 {
-    font-weight: 400;
+    font-weight: 400;  
     font-size: 26px;
 }
 
 .box__back div button {
     padding: 10px 40px;
-    border: 2px solid var(--light-white);
+    border: 2px solid #fff;
     background: transparent;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    color: var(--light-white);
+    color: white;
     outline: none;
     transition: all 300ms;
     -webkit-transition: all 300ms;
@@ -72,8 +67,8 @@ main {
 }
 
 .box__back button:hover {
-    background-color: var(--light-white);
-    color: var(--black);
+    background-color: #fff;
+    color: black;
 }
 
 /*form*/
@@ -87,7 +82,7 @@ main {
     top: -185px;
     left: 10px;
     transition: left 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
+    
     -webkit-transition: left 500ms cubic-bezier(0.1);
     -moz-transition: left 500ms cubic-bezier(0.175, 0.88);
     -ms-transition: left 500ms cubic-bezier(0.175, 0.88);
@@ -98,7 +93,7 @@ main {
 .container__login-register section {
     width: 100%;
     padding: 30px 25px;
-    background: var(--light-white);
+    background: #fff;
     position: absolute;
     border-radius: 20px;
 }
@@ -107,7 +102,7 @@ main {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
-    color: var(--black);
+    color: black;
 }
 
 .container__login-register section input {
@@ -115,7 +110,7 @@ main {
     margin-top: 20px;
     padding: 10px;
     border: none;
-    background-color: var(--light-white);
+    background-color: #f2f2f2;
     font-size: 16px;
     outline: none;
 }
@@ -125,8 +120,8 @@ main {
     margin-top: 30px;
     border: none;
     font-size: 14px;
-    background-color: var(--black);
-    color: var(--light-white);
+    background-color: black;
+    color: white;
     cursor: pointer;
     outline: none;
 }
@@ -136,13 +131,12 @@ main {
 }
 
 .container__login-register section a {
-    color: var(--black);
+    color: black;
     text-decoration: none;
     font-size: 12px;
     font-weight: 600;
     display: block;
 }
-
 .container__login-register section a:hover {
     text-decoration: underline;
 }
@@ -159,9 +153,8 @@ main {
 
 @media screen and (max-width: 850px) {
     main {
-        margin-top: 50px;
+        margin-top: 50px; 
     }
-
     .box__back {
         max-width: 350px;
         height: 300px;
@@ -176,19 +169,17 @@ main {
 
     /*Forumlario*/
     .container__login-register {
-        top: -10px;
+        top: -10px;  
         left: -5px;
         margin: auto;
     }
-
     .container__login-register section {
-        position: relative;
+        position: relative;  
     }
 
     .btn_volver {
         display: none;
     }
-
     .modal__container {
         padding: 2em 1.5em;
     }
@@ -206,7 +197,7 @@ main {
 }
 
 .btn_volver a {
-    color: var(--light-white);
+    color: white;
     text-decoration: none;
     font-size: 4em;
 }
@@ -224,11 +215,11 @@ main {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
 }
 
-/* Modal Content */
+  /* Modal Content */
 
 .modal-content {
     background-color: #fefefe;
@@ -294,7 +285,7 @@ main {
     place-items: center;
     grid-auto-columns: 100%;
     transform: var(--transform);
-    transition: var(--transition);
+    transition:var(--transition);
 }
 
 .modal__title {
@@ -312,18 +303,17 @@ main {
 
 .modal__close {
     text-decoration: none;
-    color: var(--light-white);
-    background-color: var(--black);
+    color: white;
+    background-color: black;
     padding: 1em 3em;
-    border: 1px solid;
+    border: 1px solid ;
     border-radius: 6px;
     display: inline-block;
     font-weight: 300;
     transition: background-color .3s;
 }
-
 .modal__close:hover {
-    color: var(--black);
+    color: black;
     background-color: #fff;
 }
 
@@ -334,7 +324,7 @@ main {
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background: 50% 50% no-repeat rgb(249, 249, 249);
+    background: 50% 50% no-repeat rgb(249,249,249);
     opacity: .8;
 }
 
@@ -352,13 +342,11 @@ main {
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
-
 @keyframes girar {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(360deg);
+}
 }

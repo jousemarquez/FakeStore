@@ -5,37 +5,44 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/jpg" href="../Assets/img/logo.jpg">
     <link rel="stylesheet" href="./Assets/CSS/main.css">
     <link rel="stylesheet" href="../Assets/CSS/style.css">
     <link rel="stylesheet" href="./Assets/CSS/filter.css">
     <link rel="stylesheet" href="./Assets/CSS/modal-product.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
-        integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
     <title>FakeShop | Products</title>
 </head>
 
 <body>
     <header>
-        <div class="wrapper" id="wrapper"> <!-- Envoltura -->
-            <!-- Cabecera -->
-            <nav class="navbar"> <!-- Navegador -->
-                <div class="brand"> <!-- Marca -->
+        <div class="wrapper" id="wrapper">
+            <nav class="navbar">
+                <div class="brand">
                     <a href="../index.html">
                         <h2><span id="fake">FAKE</span><span id="raya">-</span><span id="store">STORE</span></h2>
-                    </a> <!-- Nombre -->
+                    </a>
                 </div>
-                <ul class="menu"> <!-- Menú -->
+                <ul class="menu">
                     <li><a href="../index.html">Home</a></li>
                     <li><a class="active" href="./index.html">Products</a></li>
                     <li><a href="../Clients/index.html">Clients</a></li>
-                    <li><a href="../Login/index.html">Login</a></li>
+                    <li>
+                        <div id="loggedInUserDisplay"></div>
+                    </li>
+                    <li><button type="button" id="login-logout-button">Login</button></li>
                 </ul>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
             </nav>
+        </div>
     </header>
     <div class="products">
         <div class="container">
             <h1 class="lg-title">Our Products</h1>
+            <button id="add-product-button">Add New Product</button>
             <div class="wrapper2">
                 <nav>
                     <div class="items" id="items">
@@ -59,8 +66,6 @@
     </footer>
 
     <!-- MODAL -->
-    <div class="modal-container" id="modal_container" style="display:none">
-    </div>
 
     <div class="cart-main">
         <div class="cart" id="my-cart">
@@ -83,10 +88,85 @@
         </div>
     </div>
 
+    <!-- Add product Modal -->
+
+    <div class="modal-container" id="modal_container" style="display:none">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2>Add New Product</h2>
+            <form id="add-product-form">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" placeholder="Title" required>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" placeholder="price" required>
+
+                <div>
+                    <label for="category">Username</label>
+                    <select name="category" id="category" required>
+                        <option value="electronics">Electronics</option>
+                        <option value="jewelery">Jewelery</option>
+                        <option value="men's clothing">Men's clothing</option>
+                        <option value="women's clothing">Women's clothing</option>
+                    </select>
+                </div>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" placeholder="description" required></textarea>
+
+                <label for="image">Image URL:</label>
+                <input type="url" id="image" name="image" placeholder="image url" required>
+
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Edit Product -->
+    <div class="modal-container" id="edit_modal_container" style="display:none">
+        <div class="modal-content">
+            <span class="close" id="close-edit-modal">&times;</span>
+            <h2>Edit Product</h2>
+            <form id="edit-product-form">
+                <!-- Agrega un campo oculto para almacenar el ID del producto -->
+                <input type="hidden" id="edit-product-id" name="product-id">
+
+                <label for="edit-title">Title:</label>
+                <input type="text" id="edit-title" name="title" placeholder="Title" required>
+
+                <label for="edit-price">Price:</label>
+                <input type="number" id="edit-price" name="price" placeholder="price" required>
+
+                <div>
+                    <label for="edit-category">Category:</label>
+                    <select name="category" id="edit-category" required>
+                        <option value="electronics">Electronics</option>
+                        <option value="jewelry">Jewelry</option>
+                        <option value="men's clothing">Men's clothing</option>
+                        <option value="women's clothing">Women's clothing</option>
+                    </select>
+                </div>
+
+                <label for="edit-description">Description:</label>
+                <textarea id="edit-description" name="description" placeholder="description" required></textarea>
+
+                <label for="edit-image">Image URL:</label>
+                <input type="url" id="edit-image" name="image" placeholder="image url" required>
+
+                <button type="submit">Edit Product</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
     <div id="loading" style="display:none">
         <div class="icono"></div>
     </div>
-    <script src="./Assets/JS/Script.js"></script>
+    <script src="../Assets/JS/Script.js" defer></script>
+    <script src="./Assets/JS/Script.js" defer></script>
 </body>
 
 </html>
